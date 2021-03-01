@@ -3,7 +3,7 @@ import 'package:flutter_weather_app/models/weather.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherService {
-  // need insert your API Key from openweathermap.org
+  // need insert your API Key from
   static String _apiKey = '';
 
   static Future<Weather> fetchCurrentWeather(

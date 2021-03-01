@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColorDark: Colors.white,
-        primaryColor: Colors.white,
+        primaryColorDark: Colors.black,
+        primaryColor: Colors.black,
       ),
       home: MyHomePage(),
     );
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             return Scaffold(
               appBar: AppBar(
                 elevation: 0,
-                backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+                backgroundColor: Colors.black,
                 actions: [
                   IconButton(
                     icon: Icon(Icons.search),
@@ -57,11 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 ],
               ),
-              body: Padding(
-                padding: EdgeInsets.only(top: 64),
-                child: MainScreenWrapper(
-                    weather: state.weather, hourlyWeather: state.hourlyWeather),
-              ),
+              body: MainScreenWrapper(
+                  weather: state.weather, hourlyWeather: state.hourlyWeather),
             );
           }
           return Scaffold(

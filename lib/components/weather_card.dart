@@ -20,14 +20,15 @@ class WeatherCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        // Добавляем отступы
         padding: EdgeInsets.all(8),
         child: Center(
           child: Column(
-            mainAxisAlignment:
-                MainAxisAlignment.center, // Выравниваем по центру
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(this.title),
+              Text(
+                this.title,
+                style: TextStyle(color: Colors.white),
+              ),
               Image.network(
                   "http://openweathermap.org/img/wn/${this.iconCode}@2x.png",
                   scale: this.iconScale),
@@ -35,7 +36,8 @@ class WeatherCard extends StatelessWidget {
                 '${this.temperature}°',
                 style: TextStyle(
                     fontSize: this.temperatureFontSize,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ],
           ),

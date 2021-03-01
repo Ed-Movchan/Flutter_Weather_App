@@ -32,7 +32,10 @@ class MySearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) {
     return Container(
       child: Center(
-        child: Text(selectedResult),
+        child: Text(
+          selectedResult,
+          style: TextStyle(color: Colors.black),
+        ),
       ),
     );
   }
@@ -50,18 +53,24 @@ class MySearchDelegate extends SearchDelegate {
         .where((element) => element.contains(query))
         .toList();
 
-    return ListView.builder(
-      itemCount: searchResults.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(searchResults[index]),
-          onTap: () {
-            selectedResult = searchResults[index];
-            callback(selectedResult);
-            Navigator.pop(context);
-          },
-        );
-      },
+    return Container(
+      color: Colors.black,
+      child: ListView.builder(
+        itemCount: searchResults.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(
+              searchResults[index],
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {
+              selectedResult = searchResults[index];
+              callback(selectedResult);
+              Navigator.pop(context);
+            },
+          );
+        },
+      ),
     );
   }
 }

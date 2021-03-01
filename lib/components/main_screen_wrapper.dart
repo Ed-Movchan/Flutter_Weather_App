@@ -13,12 +13,17 @@ class MainScreenWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.black,
       child: Column(children: [
         Text(
           weather.cityName,
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        Text('${weather.description}'),
+        Text(
+          '${weather.description}',
+          style: TextStyle(color: Colors.white),
+        ),
         Spacer(),
         WeatherCard(
           title: "Now",
