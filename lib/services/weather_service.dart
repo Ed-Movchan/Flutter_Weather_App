@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class WeatherService {
   // need insert your API Key from
-  static String _apiKey = '';
+  static String _apiKey = '8154d0e1242aea59eede51268479639e';
 
   static Future<Weather> fetchCurrentWeather(
       {query, String lat = "", String lon = ""}) async {

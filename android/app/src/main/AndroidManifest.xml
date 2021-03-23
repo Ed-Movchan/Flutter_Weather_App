@@ -8,7 +8,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="flutter_weather_app"
-        android:icon="@mipmap/logo">
+        android:icon="@mipmap/app_logo">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
