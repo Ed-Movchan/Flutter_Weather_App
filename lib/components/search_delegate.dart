@@ -49,9 +49,34 @@ class MySearchDelegate extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    List<String> searchResults = ["Kiev", "Kharkiv", "Lviv", query]
-        .where((element) => element.contains(query))
-        .toList();
+    List<String> searchResults = [
+      "Kiev",
+      "Kharkiv",
+      "Lviv",
+      "Odessa",
+      "Dnipro",
+      "Zaporizhia",
+      "Mykolaiv",
+      "Vinnytsia",
+      "Chernihiv",
+      "Kherson",
+      "Poltava",
+      "Khmelnytskyi",
+      "Cherkasy",
+      "Chernivtsi",
+      "Zhytomyr",
+      "Sumy",
+      "Rivne",
+      "Ivano-Frankivsk",
+      "Ternopil",
+      "Kropyvnytskyi",
+      "Lutsk",
+      "Uzhhorod",
+      "Donetsk",
+      "Luhansk",
+      "Sevastopol",
+      query
+    ].where((element) => element.contains(query)).toList();
 
     return Container(
       color: Colors.black,
